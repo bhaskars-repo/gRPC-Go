@@ -1,0 +1,23 @@
+/*
+    @Author: Bhaskar S
+    @Blog:   https://www.polarsparc.com
+    @Date:   28 Nov 2020
+*/
+
+syntax = "proto3";
+
+package unary;
+
+option go_package = "polarsparc.com/grpc/unary/greetpb";
+
+message GreetRequest {
+  string name = 1;
+}
+
+message GreetResponse {
+  string message = 1;
+}
+
+service GreetService {
+  rpc greet(GreetRequest) returns (GreetResponse);
+}
